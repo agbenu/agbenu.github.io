@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "My Logo Font";
+  src: url("SEA.ttf") format("truetype");
+}
+.android {
+  background-color: #0a7621;
+}
+.django {
+  background-color: #588af0;
+}
+body {
+  background-color: #3f3075;
+  color: #fff;
+}
+body .heading_1 {
+  font-style: italic;
+  font-size: 30px;
+  font-family: "My Logo Font" helvetica, arial, sans-serif;
+}
+body a {
+  color: #fff;
+}
+body .quick_fix {
+  min-height: 50px;
+}
+body span.element {
+  font-size: 30px;
+  margin: 20px 0;
+  min-height: 100px;
+}
+body .main_content {
+  margin: auto;
+}
+body .main_content a:link {
+  color: #fff;
+}
+body .main_content a:visited {
+  color: #fff;
+}
+body .main_content a:hover {
+  color: #fff;
+}
+body .main_content a:active {
+  color: #fff;
+}
+body .space_out {
+  margin: 20px;
+}
+body #logo {
+  font-family: "My Logo Font" helvetica, arial, sans-serif;
+  font-size: 40px;
+}
+body .written_text {
+  font-size: 20px;
+}
+body .curved_corners {
+  border-radius: 30px;
+}
+body .white_row {
+  color: color_gold;
+  background-color: #fff;
+}
+body .white_row a {
+  color: color_gold;
+}
+div {
+  margin: 10px;
+}
+div .space_out {
+  margin: 20px;
+}
