@@ -14,7 +14,9 @@
 				</div>
 
 					<div ng-repeat="python_tutorial in python_tutorials " class="col-sm-4">
-						<a href="{{ python_tutorial.link }}" >  {{ python_tutorial.link_title  }} </a>
+						<a href="{{ python_tutorial.gist_link }}" 
+						target="_blank"  
+						ng-click="setPythonTutorial( python_tutorial.gist_link )" >  {{ python_tutorial.link_title  }} </a>
 					</div>
 
 			 </div>
