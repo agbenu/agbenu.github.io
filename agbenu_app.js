@@ -9,15 +9,10 @@ angular.module('agbenuApp', ['ngRoute'])
                 controller:"HomePageController"
             })
 
-            .when("/python",{
-                templateUrl: "./templates/python.html",
-                controller:"PythonPageController"
+            .when("/websites",{
+                templateUrl: "./templates/websites.html",
+                controller:"WebsitePageController"
             })
-
-            .when("/gist/code/python",{
-                templateUrl: "./templates/gist_code.html",
-                controller:"GistCodeController"
-            })            
 
             .when("/android",{
                 templateUrl: "./templates/android.html",
@@ -44,73 +39,66 @@ angular.module('agbenuApp', ['ngRoute'])
         }])
 
 
-    .controller('PythonPageController', 
+    .controller('WebsitePageController', 
 
-            ['$scope', 'GistService', function ($scope,GistService) {
+            ['$scope', function ($scope) {
 
-            $scope.welcome_text = 'Python is really good for text processing and data handling';
+            $scope.welcome_text = 'I will love to work on that site of yours : - ) .' ;
 
 
-            var python_tutorials = [
+            var web_sites_done = [
                { 
-                link: '/gist/code/python', 
-                link_title:'Django config sample with Nginx', 
-                gist_link: 'https://gist.github.com/lefootballroi/25c66b5cd6a1cea7a2f4fa094e8c4b5b',
-                code_language: 1
+                domain_name:'Black Pixels Gh', 
+                web_link: 'http://blackpixelsgh.com',
            } ,
                { 
-                link: '/gist/code/python', 
-                link_title:'Multiple apps from a single Nginx port', 
-                gist_link: 'https://gist.github.com/lefootballroi/25c66b5cd6a1cea7a2f4fa094e8c4b5b',
-                code_language: 1                                 
+                domain_name:'Debugger Co Ltd', 
+                web_link: 'http://debuggercoltd.com',
             } ,
                { 
-                link: '/gist/code/python', 
-                link_title:'Custom user model',
-                gist_link: 'https://gist.github.com/lefootballroi/25c66b5cd6a1cea7a2f4fa094e8c4b5b',
-                code_language: 1                                  
+                domain_name:'Techne Co Ltd',
+                web_link: 'http://techne.in',
            } ,                              
+               { 
+                domain_name:'More to come',
+                web_link: 'http://agbenu.com',
+           } ,                                         
             ];
 
-            $scope.python_tutorials = python_tutorials;
-
-            $scope.setPythonTutorial= function(this_gist_link) {
-                    GistService.setTutorial(this_gist_link);                                           
-                }
+            $scope.web_sites_done = web_sites_done;
 
 
-        }])    
-
-
-    .controller('GistCodeController', 
-            ['$scope', 'GistService' ,function ($scope,GistService) 
-            {
-
-                var this_gist_link =  GistService.getTutorial(); 
-
-                $scope.this_gist_link = this_gist_link;
-                
-                console.log(this_gist_link);                                                                   
-             
         }])
 
 
-    .service('GistService', function () 
-        {
-            var gist_link="xxx";
-            return {
+    .controller('AndroidPageController', 
 
-                    setTutorial: function (this_gist_link){ 
-                        gist_link = this_gist_link;
-                        //console.log(gist_link);                                                   
-                    },
+            ['$scope', function ($scope) {
 
-                    getTutorial: function (){ 
-                        return gist_link;
-                    },
+            $scope.welcome_text = 'Android apps are nice to have. You can have one too.' ;
 
-                };
-          
-        });    
 
-    
+            var apps_done = [
+               { 
+                name:'Dumsor CountDown', 
+                store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.dumsorcounter&hl=en',
+           } ,
+               { 
+                name:'Sounds Scape', 
+                store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.soundscape&hl=en',
+            } ,
+               { 
+                name:'Seconds Old',
+                store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.secondsold&hl=en',
+           } ,                              
+               { 
+                name:'More to come',
+                store_link: 'http://agbenu.com',
+           } ,                                         
+            ];
+
+            $scope.apps_done = apps_done;
+
+
+        }]);    
+
