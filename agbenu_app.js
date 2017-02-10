@@ -104,22 +104,22 @@ angular.module('agbenuApp', ['ngRoute'])
             var apps_done = [
                { 
                 name:'Dumsor CountDown', 
-                store_link: '#/android/app_details/dumsorcountdown',
+                app_link: '#/android/app_details/dumsorcountdown',
                 //store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.dumsorcounter&hl=en',
            } ,
                { 
                 name:'Sounds Scape', 
-                store_link: '#/android/app_details/soundscape',
+                app_link: '#/android/app_details/soundscape',
                 //store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.soundscape&hl=en',
             } ,
                { 
                 name:'Seconds Old',
-                store_link: '#/android/app_details/secondsold',                
+                app_link: '#/android/app_details/secondsold',                
                 //store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.secondsold&hl=en',
            } ,                              
                { 
                 name:'More to come',
-                store_link: 'http://agbenu.com',
+                app_link: 'http://agbenu.com',
            } ,                                         
             ];
 
