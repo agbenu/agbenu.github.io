@@ -20,6 +20,29 @@ angular.module('agbenuApp', ['ngRoute'])
             }) 
 
 
+            /*
+            .when("/android/app",{
+                templateUrl: "./templates/android_app.html",
+                controller:"AppPageController"
+            }) 
+            */
+
+            .when("/android/app_details/dumsorcountdown",{
+                templateUrl: "./templates/android_app.html",
+                controller:"DumsorAppPageController"
+            }) 
+
+            .when("/android/app_details/soundscape",{
+                templateUrl: "./templates/android_app.html",
+                controller:"SoundScapeAppPageController"
+            }) 
+
+
+            .when("/android/app_details/secondsold",{
+                templateUrl: "./templates/android_app.html",
+                controller:"SecondsOldAppPageController"
+            }) 
+
             .otherwise('/',
             {
                 controller:'HomePageController',
@@ -81,15 +104,18 @@ angular.module('agbenuApp', ['ngRoute'])
             var apps_done = [
                { 
                 name:'Dumsor CountDown', 
-                store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.dumsorcounter&hl=en',
+                store_link: '#/android/app_details/dumsorcountdown',
+                //store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.dumsorcounter&hl=en',
            } ,
                { 
                 name:'Sounds Scape', 
-                store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.soundscape&hl=en',
+                store_link: '#/android/app_details/soundscape',
+                //store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.soundscape&hl=en',
             } ,
                { 
                 name:'Seconds Old',
-                store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.secondsold&hl=en',
+                store_link: '#/android/app_details/secondsold',                
+                //store_link: 'https://play.google.com/store/apps/details?id=com.eliagbenu.secondsold&hl=en',
            } ,                              
                { 
                 name:'More to come',
@@ -99,6 +125,33 @@ angular.module('agbenuApp', ['ngRoute'])
 
             $scope.apps_done = apps_done;
 
+
+        }])
+
+    .controller('SoundScapeAppPageController', 
+
+            ['$scope', function ($scope) {
+
+            $scope.app_title = 'Sound Scape';
+            $scope.store_link= 'https://play.google.com/store/apps/details?id=com.eliagbenu.soundscape&hl=en';
+
+        }])    
+
+    .controller('SecondsOldAppPageController', 
+
+            ['$scope', function ($scope) {
+
+            $scope.app_title = 'Seconds Old';
+            $scope.store_link= 'https://play.google.com/store/apps/details?id=com.eliagbenu.secondsold&hl=en';
+
+        }])        
+        
+    .controller('DumsorAppPageController', 
+
+            ['$scope', function ($scope) {
+
+            $scope.app_title = 'Dumsor countdown';
+            $scope.store_link='https://play.google.com/store/apps/details?id=com.eliagbenu.dumsorcounter&hl=en';
 
         }]);    
 
